@@ -1,4 +1,4 @@
-package org.murmurio.model;
+package org.murmurio;
 
 public interface RestClient {
 }
