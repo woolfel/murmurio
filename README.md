@@ -1,5 +1,9 @@
 # murmurio
-murmur.io is a set of libraries for OpenAI Whisper API. Right now this is the name, but it could change in the future.
+murmur.io is a set of libraries for OpenAI API. Right now murmur the name, but it could change in the future.
+
+## OpenAI documentation
+
+[https://platform.openai.com/docs/introduction] OpenAi developer documentation
 
 ## Goals
 
@@ -14,6 +18,10 @@ At a high level, the goal of the project is to provide use friendly client for O
 * secure the access token
 * provide good user friendly documentation and examples
 * support Java, C# and Javascript
+
+## Getting Started
+
+## Examples
 
 ## Milestones
 
