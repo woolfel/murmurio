@@ -9,5 +9,7 @@
     {"version": "1","endpoint": "/v1/audio/translations","name": "whisper-1","deprecation date": ""},
     {"version": "1","endpoint": "/v1/embeddings","name": "text-embedding-ada-002, text-search-ada-doc-001","deprecation date": ""},
     {"version": "1","endpoint": "/v1/moderations","name": "text-moderation-stable, text-moderation-latest","deprecation date": ""}
-  ]
+  ],
+  "timeout": 30,
+  "retries": 2
 }
