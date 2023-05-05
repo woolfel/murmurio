@@ -33,7 +33,25 @@ TBD
 
 ## Why another Javascript client for OpenAI?
 
-OpenAI uses access tokens for security. If you were to use the access token in the browser, a hacker can easily grab your token and abuse it. It is safer to setup your own service that uses the access token and the browser makes requests to your service. This way, the browser communication can use OpenID for authentication and authorization to your service. If a hacker gets access to a user's session token, you just expire that token and ask the user to login again. Your OpenID token is safe.
+OpenAI uses access tokens for security. If you were to use the access token in the browser, a hacker can easily grab your token and abuse it. It is safer to setup your own service that uses the access token and the browser makes requests to your service. This way, the browser communication can use OpenID for authentication and authorization to your service. If a hacker gets access to a user's session token, you just expire that token and ask the user to login again.
+
+### Official OpenAI example for Node
+
+```javascript
+const { Configuration, OpenAIApi } = require("openai");
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+const response = await openai.createCompletion({
+  model: "text-davinci-003",
+  prompt: "Say this is a test",
+  temperature: 0,
+  max_tokens: 7,
+});
+```
+
+Notice the example creates a new instance of Configuration and reads the API key from environment. If you were to do the same thing from a simple webpage, the API key would have to be in the javascript somewhere. Basically, don't expose your API key. The example from OpenAI is meant to be run from NodeJS as a service. There's quite a few javascript libraries that wrap OpenAI javascript library. Most of them don't handle exceptions and leaves it up to the developer. Errors happen and you should always handle error conditions.
 
 ## Dependencies to external libraries
 
