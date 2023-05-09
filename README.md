@@ -54,6 +54,8 @@ const response = await openai.createCompletion({
 
 Notice the example creates a new instance of Configuration and reads the API key from environment. If you were to do the same thing from a simple webpage, the API key would have to be in the javascript. Basically, don't expose your API key. The example from OpenAI is meant to be run from NodeJS as a service. There's quite a few javascript libraries that wrap OpenAI javascript library. Most of them don't handle exceptions and leaves it up to the developer. Errors happen and you should always handle error conditions. If you're running on Azure, the API key should be stored in a keyvault.
 
+Instead of reading OOPENAI_API_KEY from the enviroment variables, the code would read the keyvault name, make a connection to the vault and then use the API key to send requests to OpenAI.
+
 ## Dependencies to external libraries
 
 A common complaint of open source libraries is bloated external dependencies that cause version conflicts. We will do our best to limit external libraries and reduce the chance of version conflicts. Where it makes sense to use existing open source library, that will be the preferred approach to reduce development time. If we discover a library causes too much friction with other popular libraries, we will evaluate and decide on a case-by-cases basis.
