@@ -1,0 +1,35 @@
+{
+    "title": "AudioResponse",
+    "type": "object",
+    "properties": {
+      "object": {
+        "type": "string",
+        "description": "the model type of the request"
+      },
+      "created": {
+        "type": "integer",
+        "description": "timestamp of the response"
+      },
+      "choices": {
+        "type": "array",
+        "EditChoice": {
+            "type":"object",
+            "properties": {
+                "text": {"type":"string"},
+                "index": {"type":"integer"}
+            }
+        }
+      },
+      "usage": {
+        "type": "object",
+        "EditUsage": {
+            "type":"object",
+            "properties":{
+                "prompt_tokens": {"type":"integer"},
+                "completion_tokens": {"type":"integer"},
+                "total_tokens": {"type":"integer"}
+            }
+        }
+      }
+    }
+  }
