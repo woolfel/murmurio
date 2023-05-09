@@ -5,7 +5,7 @@
   "endpoints": [
     {"version": "1","endpoint": "/v1/chat/completions","name": "gpt-4, gpt-4-0314, gpt-4-32k, gpt-4-32k-0314, gpt-3.5-turbo, gpt-3.5-turbo-0301","deprecationDate": ""},
     {"version": "1","endpoint": "/v1/completions","name": "text-davinci-003, text-davinci-002, text-curie-001, text-babbage-001, text-ada-001","deprecationDate": ""},
-    {"version": "1","endpoint": "/v1/edits","name": "text-davinci-edit-001, code-davinci-edit-001","deprecationDate": ""},
+    {"version": "1","endpoint": "/v1/edits","name": "text-davinci-edit-001, code-davinci-edit-001","deprecationDate": "","model": "text-davinci-edit-001"},
     {"version": "1","endpoint": "/v1/audio/transcriptions","name": "whisper-1","deprecationDate": ""},
     {"version": "1","endpoint": "/v1/audio/translations","name": "whisper-1","deprecationDate": ""},
     {"version": "1","endpoint": "/v1/embeddings","name": "text-embedding-ada-002, text-search-ada-doc-001","deprecationDate": ""},
