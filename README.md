@@ -7,7 +7,7 @@ murmur.io is a set of libraries for OpenAI API. Right now murmur the name, but i
 
 ## Goals
 
-At a high level, the goal of the project is to provide use friendly client for OpenAI Whisper API. It should provide these features:
+The goal is to provide use friendly client for OpenAI API. It should provide these features:
 
 * fluent API for making  REST calls
 * support sync and async calls
@@ -18,6 +18,7 @@ At a high level, the goal of the project is to provide use friendly client for O
 * secure the access token
 * provide good user friendly documentation and examples
 * support Java, C# and Javascript
+* support cloud keystore for securing API key
 
 ## Getting Started
 
@@ -51,7 +52,7 @@ const response = await openai.createCompletion({
 });
 ```
 
-Notice the example creates a new instance of Configuration and reads the API key from environment. If you were to do the same thing from a simple webpage, the API key would have to be in the javascript somewhere. Basically, don't expose your API key. The example from OpenAI is meant to be run from NodeJS as a service. There's quite a few javascript libraries that wrap OpenAI javascript library. Most of them don't handle exceptions and leaves it up to the developer. Errors happen and you should always handle error conditions.
+Notice the example creates a new instance of Configuration and reads the API key from environment. If you were to do the same thing from a simple webpage, the API key would have to be in the javascript. Basically, don't expose your API key. The example from OpenAI is meant to be run from NodeJS as a service. There's quite a few javascript libraries that wrap OpenAI javascript library. Most of them don't handle exceptions and leaves it up to the developer. Errors happen and you should always handle error conditions. If you're running on Azure, the API key should be stored in a keyvault.
 
 ## Dependencies to external libraries
 
