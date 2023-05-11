@@ -8,6 +8,7 @@ import java.util.Map;
 /**
  * for the full schema description, look at the jsonschema definition.
  * OpenAI link - https://platform.openai.com/docs/api-reference/completions
+ * https://platform.openai.com/docs/api-reference/completions/create
  * <pre>
  *     curl https://api.openai.com/v1/completions \
  *   -H "Content-Type: application/json" \
