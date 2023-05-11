@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * for the full schema description, look at the jsonschema definition
- *
+ * OpenAI link - https://platform.openai.com/docs/api-reference/edits
  * <pre>
  *     curl https://api.openai.com/v1/edits \
  *   -H "Content-Type: application/json" \

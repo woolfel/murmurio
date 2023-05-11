@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * for the full schema description, look at the jsonschema definition
- *
+ * OpenAI link - https://platform.openai.com/docs/api-reference/edits
  * <pre>
  *     {
  *   "object": "edit",
