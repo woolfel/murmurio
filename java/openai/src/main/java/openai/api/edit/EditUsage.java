@@ -1,4 +1,4 @@
-package openai.api.audio.completion.edit;
+package openai.api.edit;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

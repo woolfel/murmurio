@@ -1,9 +1,20 @@
-package openai.api.audio.completion.edit;
+package openai.api.edit;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * for the full schema description, look at the jsonschema definition
+ *
+ * <pre>
+ *     curl https://api.openai.com/v1/edits \
+ *   -H "Content-Type: application/json" \
+ *   -H "Authorization: Bearer $OPENAI_API_KEY" \
+ *   -d '{
+ *     "model": "text-davinci-edit-001",
+ *     "input": "What day of the wek is it?",
+ *     "instruction": "Fix the spelling mistakes"
+ *   }'
+ * </pre>
  *
  * @author  peter lin
  */

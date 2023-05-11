@@ -1,4 +1,4 @@
-package openai.api.audio.completion.edit;
+package openai.api.edit;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -6,6 +6,24 @@ import java.util.List;
 
 /**
  * for the full schema description, look at the jsonschema definition
+ *
+ * <pre>
+ *     {
+ *   "object": "edit",
+ *   "created": 1589478378,
+ *   "choices": [
+ *     {
+ *       "text": "What day of the week is it?",
+ *       "index": 0,
+ *     }
+ *   ],
+ *   "usage": {
+ *     "prompt_tokens": 25,
+ *     "completion_tokens": 32,
+ *     "total_tokens": 57
+ *   }
+ * }
+ * </pre>
  *
  * @author  peter lin
  */
