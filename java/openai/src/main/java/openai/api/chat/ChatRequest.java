@@ -35,9 +35,9 @@ public class ChatRequest {
     @JsonProperty("messages")
     private List<ChatMessage> messages;
     @JsonProperty("stream")
-    private Boolean stream;
+    private Boolean stream; // optional
     @JsonProperty("stop")
-    private List<String> stop;
+    private List<String> stop; // optional
     @JsonProperty("max_tokens")
     private Integer maxTokens; // optional
     @JsonProperty("presence_penalty")
