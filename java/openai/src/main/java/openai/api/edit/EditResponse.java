@@ -1,6 +1,7 @@
 package openai.api.edit;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import openai.api.Usage;
 
 import java.util.List;
 
@@ -35,7 +36,7 @@ public class EditResponse {
     @JsonProperty("choices")
     private List<EditChoice> choices;
     @JsonProperty("usage")
-    private EditUsage usage;
+    private Usage usage;
 
     public EditResponse(){}
 
@@ -63,11 +64,11 @@ public class EditResponse {
         this.choices = choices;
     }
 
-    public EditUsage getUsage() {
+    public Usage getUsage() {
         return usage;
     }
 
-    public void setUsage(EditUsage usage) {
+    public void setUsage(Usage usage) {
         this.usage = usage;
     }
 }
