@@ -8,7 +8,14 @@ import java.util.Map;
 /**
  * for the full schema description, look at the jsonschema definition.
  * OpenAI link - https://platform.openai.com/docs/api-reference/completions
- * https://platform.openai.com/docs/api-reference/completions/create
+ * <a href="https://platform.openai.com/docs/api-reference/completions/create">
+ *     https://platform.openai.com/docs/api-reference/completions/create</a>
+ * <a href="https://platform.openai.com/docs/guides/completion/introduction">
+ *     https://platform.openai.com/docs/guides/completion/introduction</a>
+ *
+ * The endpoint /v1/completion supports the following model names:
+ * text-davinci-003, text-davinci-002, text-curie-001, text-babbage-001, text-ada-001
+ * 
  * <pre>
  *     curl https://api.openai.com/v1/completions \
  *   -H "Content-Type: application/json" \
@@ -21,13 +28,20 @@ import java.util.Map;
  *   }'
  * </pre>
  *
+ * According to the OpenAI documentation, prompt can be string, array of string, token
+ * or array of token. That feels like a kitchen sink approach and feels it adds
+ * unnecessary complexity. Making prompt list of String to keep it simple.
+ *
+ * There's a high probability OpenAI will change the API in the future. Once they figure
+ * out exactly how it should work and what people want, they'll have to make changes.
+ *
  * @author  peter lin
  */
 public class CompletionRequest {
     @JsonProperty("model")
     private String model;
     @JsonProperty("prompt")
-    private String prompt;
+    private List<String> prompt;
     @JsonProperty("suffix")
     private String suffix;
     @JsonProperty("max_tokens")
@@ -65,11 +79,11 @@ public class CompletionRequest {
         this.model = model;
     }
 
-    public String getPrompt() {
+    public List<String> getPrompt() {
         return prompt;
     }
 
-    public void setPrompt(String prompt) {
+    public void setPrompt(List<String> prompt) {
         this.prompt = prompt;
     }
 
