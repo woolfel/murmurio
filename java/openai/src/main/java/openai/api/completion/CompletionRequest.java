@@ -7,7 +7,8 @@ import java.util.Map;
 
 /**
  * for the full schema description, look at the jsonschema definition.
- * OpenAI link - https://platform.openai.com/docs/api-reference/completions
+ * OpenAI link - <a href="https://platform.openai.com/docs/api-reference/completions">
+ *     https://platform.openai.com/docs/api-reference/completions</a>
  * <a href="https://platform.openai.com/docs/api-reference/completions/create">
  *     https://platform.openai.com/docs/api-reference/completions/create</a>
  * <a href="https://platform.openai.com/docs/guides/completion/introduction">
@@ -15,7 +16,7 @@ import java.util.Map;
  *
  * The endpoint /v1/completion supports the following model names:
  * text-davinci-003, text-davinci-002, text-curie-001, text-babbage-001, text-ada-001
- * 
+ *
  * <pre>
  *     curl https://api.openai.com/v1/completions \
  *   -H "Content-Type: application/json" \
@@ -27,13 +28,13 @@ import java.util.Map;
  *     "temperature": 0
  *   }'
  * </pre>
- *
+ * <p>
  * According to the OpenAI documentation, prompt can be string, array of string, token
  * or array of token. That feels like a kitchen sink approach and feels it adds
- * unnecessary complexity. Making prompt list of String to keep it simple.
- *
+ * unnecessary complexity. Making prompt list of String to keep it simple.</p>
+ * <p>
  * There's a high probability OpenAI will change the API in the future. Once they figure
- * out exactly how it should work and what people want, they'll have to make changes.
+ * out exactly how it should work and what people want, they'll have to make changes.</p>
  *
  * @author  peter lin
  */
