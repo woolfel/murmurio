@@ -44,4 +44,38 @@ public class EmbeddingResponse {
     private String object;
     @JsonProperty("usage")
     private Usage usage;
+
+    public EmbeddingResponse(){}
+
+    public List<Embedding> getData() {
+        return data;
+    }
+
+    public void setData(List<Embedding> data) {
+        this.data = data;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getObject() {
+        return object;
+    }
+
+    public void setObject(String object) {
+        this.object = object;
+    }
+
+    public Usage getUsage() {
+        return usage;
+    }
+
+    public void setUsage(Usage usage) {
+        this.usage = usage;
+    }
 }
