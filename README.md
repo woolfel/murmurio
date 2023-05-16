@@ -30,9 +30,11 @@ TBD
 
 ## Milestones
 
-TBD
+1. base set of OpenAI classes
+2. design the services
+3. design the client command line tools
 
-## Why another Javascript client for OpenAI?
+## Why another library for OpenAI?
 
 OpenAI uses access tokens for security. If you were to use the access token in the browser, a hacker can easily grab your token and abuse it. It is safer to setup your own service that uses the access token and the browser makes requests to your service. This way, the browser communication can use OpenID for authentication and authorization to your service. If a hacker gets access to a user's session token, you just expire that token and ask the user to login again.
 
