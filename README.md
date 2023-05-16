@@ -65,3 +65,6 @@ This also means the code should not arbitrarily write the API key to the log whe
 A common complaint of open source libraries is bloated external dependencies that cause version conflicts. We will do our best to limit external libraries and reduce the chance of version conflicts. Where it makes sense to use existing open source library, that will be the preferred approach to reduce development time. If we discover a library causes too much friction with other popular libraries, we will evaluate and decide on a case-by-cases basis.
 
 
+## JSON Schema
+
+A sad fact is OpenAI doesn't provide JSON schema for any of the models. The project is gradually creating the JSON schema definition and will attempt to document it thoroughly.
