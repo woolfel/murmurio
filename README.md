@@ -19,6 +19,7 @@ The goal is to provide use friendly client for OpenAI API. It should provide the
 * provide good user friendly documentation and examples
 * support Java, C# and Javascript
 * support cloud keystore for securing API key
+* publish the code to maven central
 
 ## Getting Started
 
@@ -33,6 +34,7 @@ TBD
 1. base set of OpenAI classes
 2. design the services
 3. design the client command line tools
+4. setup nightly build to maven central
 
 ## Why another library for OpenAI?
 
